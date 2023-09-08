@@ -2,6 +2,10 @@ const hours = document.getElementById("hours");
 const minutes = document.getElementById("minutes");
 const seconds = document.getElementById("seconds");
 const profileDay = document.getElementById("profile-day");
+const UTCTime = document.getElementById("UTCTime");
+
+const utc = new Date();
+UTCTime.innerText = utc.getUTCMilliseconds();
 
 switch (new Date().getDay()) {
   case 0:

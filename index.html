@@ -20,7 +20,9 @@
         </div>
 
         <!-- Profile name -->
-        <div class="profile-name">Jesse Moses Kwagga</div>
+        <div class="profile-name" data-testid="slackUserName">
+          Jesse Moses Kwagga
+        </div>
 
         <!-- Profile track -->
         <div class="profile-track">
@@ -32,13 +34,24 @@
 
       <!-- Profile day & time -->
       <div class="body" style="display: flex; flex-direction: column">
-        <div class="profile-day" id="profile-day">Monday,</div>
+        <div
+          class="profile-day"
+          id="profile-day"
+          data-testid="currentDayOfTheWeek"
+        >
+          Monday,
+        </div>
         <div class="profile-time">
           <div class="hour" id="hours"></div>
           <div class="colon" style="margin-bottom: 4px; padding: 0 2px">:</div>
           <div class="minute" id="minutes">47</div>
           <div class="colon" style="margin-bottom: 4px; padding: 0 2px">:</div>
           <div class="seconds" id="seconds">00</div>
+          <div
+            data-testid="currentUTCTime"
+            id="UTCTime"
+            style="display: hidden"
+          ></div>
         </div>
       </div>
 
@@ -47,6 +60,7 @@
         class="profile-github"
         href="https://github.com/reelmza/hngx-1"
         target="_blank"
+        data-testid="githubURL"
       >
         <span>Github Repository</span>
         <svg
