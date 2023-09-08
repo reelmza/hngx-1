@@ -35,7 +35,18 @@ switch (new Date().getDay()) {
 
 const myinterval = setInterval(() => {
   const now = new Date();
+  if (now.getMinutes() < 9) {
+    minutes.innerText = "0" + now.getMinutes();
+    console.log("0" + now.getMinutes());
+  } else {
+    minutes.innerText = now.getMinutes();
+  }
+
+  if (now.getSeconds() < 9) {
+    seconds.innerText = "0" + now.getSeconds();
+  } else {
+    seconds.innerText = now.getSeconds();
+  }
+
   hours.innerText = now.getHours();
-  minutes.innerText = now.getMinutes();
-  seconds.innerText = now.getSeconds();
 }, 1000);
