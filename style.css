@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    height: 100%;
+    width: 100%;
+}
+
+
+body {
+    --light-text:rgb(61, 61, 61);
+    --black-text: rgb(34, 34, 34);
+
+    font-family: "Inter", "sans-serif";
+    font-size: 16px;
+    letter-spacing: -0.7px;
+    user-select: none;
+    height: 100%;
+    width: 100%;
+    background: rgb(253, 253, 253);
+    background-image: url("./images/confetti.png");
+    background-repeat:no-repeat;
+    background-size: 350px;
+    background-position:-200px -220px;
+    color: var(--black-text);
+}
+
+main {
+    height: 100%;
+    width: 100%;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0rem 1.5rem;
+}
+
+header {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 3rem;
+}
+
+/* Profile Pic */
+.profile-picture {
+   height: 7rem;
+   width: 7rem;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   margin-bottom: 2rem;
+   border-radius: 100%;
+   box-shadow: rgb(233, 233, 233) 0 0px 40px;
+   overflow: hidden;
+}
+
+.profile-picture::after {
+    content: "";
+    position: absolute;
+    height: 7rem;
+    width: 7rem;
+    border: solid 5px #fff;
+    border-radius: 100%;
+}
+
+.profile-picture img {
+    height: 100%;
+}
+
+/* Profile name */
+.profile-name {
+    font-size: 1.5rem;
+    font-weight: 800;
+    margin-bottom: .3rem;
+    text-align: center;
+    line-height: 100%;
+}
+
+/* Profile track */
+.profile-track {
+    display:flex;
+    align-items: center;
+    color: var(--light-text);
+}
+
+
+/* Profile day */
+.profile-day {
+    margin-bottom: .1rem;
+}
+
+.profile-time {
+    font-size: 2rem;
+    display: flex;
+    align-items: center;
+}
+
+.profile-day, .profile-time {
+    font-weight: 800;
+    align-self: center;
+}
+
+.colon {
+    animation: pulse 2s infinite cubic-bezier(1, 0, 0, 1);
+}
+
+@keyframes pulse {
+    0% {
+      opacity: 1;
+    }
+
+    100% {
+       opacity: 0.8;
+    }
+    
+}
+
+/* Body */
+.body {
+    margin-bottom: 3rem;
+}
+
+/* Profile github */
+.profile-github {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: var(--light-text);
+    border: solid 1px var(--light-text);
+    padding: .4rem 1rem;
+    border-radius: .2rem;
+    font-weight: 600;
+}
