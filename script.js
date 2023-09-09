@@ -1,11 +1,5 @@
-const hours = document.getElementById("hours");
-const minutes = document.getElementById("minutes");
-const seconds = document.getElementById("seconds");
 const profileDay = document.getElementById("profile-day");
 const UTCTime = document.getElementById("UTCTime");
-
-const utc = new Date();
-UTCTime.innerText = utc.getUTCMilliseconds();
 
 switch (new Date().getDay()) {
   case 0:
@@ -39,18 +33,27 @@ switch (new Date().getDay()) {
 
 const myinterval = setInterval(() => {
   const now = new Date();
-  if (now.getMinutes() < 9) {
-    minutes.innerText = "0" + now.getMinutes();
-    console.log("0" + now.getMinutes());
+  let hour, minutes, seconds, milliseconds;
+
+  if (now.getHours() < 9) {
+    hour = "0" + now.getHours();
   } else {
-    minutes.innerText = now.getMinutes();
+    hour = "" + now.getHours();
+  }
+
+  if (now.getMinutes() < 9) {
+    minutes = "0" + now.getMinutes();
+  } else {
+    minutes = "" + now.getMinutes();
   }
 
   if (now.getSeconds() < 9) {
-    seconds.innerText = "0" + now.getSeconds();
+    seconds = "0" + now.getSeconds();
   } else {
-    seconds.innerText = now.getSeconds();
+    seconds = "" + now.getSeconds();
   }
 
-  hours.innerText = now.getHours();
+  milliseconds = now.getMilliseconds();
+
+  UTCTime.innerText = hour + ":" + minutes + ":" + seconds + ":" + milliseconds;
 }, 1000);
